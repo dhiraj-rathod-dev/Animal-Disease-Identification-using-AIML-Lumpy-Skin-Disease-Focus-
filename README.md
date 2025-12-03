@@ -11,9 +11,13 @@ The solution combines **Convolutional Neural Networks (CNN)** for disease detect
 
 ---
 
-Here is your **updated README section** with the **Project Members added cleanly and professionally** under the **Team & Duration** part.
+## 📡 System Architecture Diagram
+
+<img src="![architecture digram](https://github.com/user-attachments/assets/a616f2f3-05bf-420f-bb37-0c6ec53c8157)
+" alt="System Architecture Diagram" width="100%" />
 
 ---
+
 
 ## 👨‍💻 Team & Duration
 
