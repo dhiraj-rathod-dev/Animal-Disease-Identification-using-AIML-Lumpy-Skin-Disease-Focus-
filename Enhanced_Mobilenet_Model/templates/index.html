@@ -1,0 +1,141 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Lumpy Skin Disease Detection</title>
+</head>
+<body>
+
+<h2>Lumpy Skin Disease Detection</h2>
+
+<form action="/predict" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Predict</button>
+</form>
+
+{% if image_url %}
+    <h3>Uploaded Image:</h3>
+    <img src="{{ image_url }}" width="300">
+{% endif %}
+
+{% if result %}
+    <h3>Result: {{ result }}</h3>
+    <p>Prediction score: {{ score }}</p>
+{% endif %}
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lumpy Skin Disease Detector</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #d9f7ff, #fff7f7);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 450px;
+            margin: 60px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .upload-box {
+            border: 2px dashed #888;
+            padding: 25px;
+            border-radius: 10px;
+            background: #fafafa;
+            margin-bottom: 20px;
+        }
+
+        input[type="file"] {
+            margin-top: 10px;
+        }
+
+        button {
+            background: #007bff;
+            border: none;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-size: 16px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        .result-box {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .success {
+            background: #d4ffd8;
+            border-left: 6px solid #28a745;
+            color: #155724;
+        }
+
+        .error {
+            background: #ffe1e1;
+            border-left: 6px solid #dc3545;
+            color: #721c24;
+        }
+
+        .img-preview {
+            margin-top: 15px;
+            border-radius: 10px;
+            border: 2px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>🐄 Lumpy Skin Disease Detection</h2>
+
+    <form action="/predict" method="POST" enctype="multipart/form-data">
+
+        <div class="upload-box">
+            <p><strong>Select an image of cow skin:</strong></p>
+            <input type="file" name="file" required>
+        </div>
+
+        <button type="submit">🔍 Predict</button>
+    </form>
+
+    {% if image_url %}
+        <h3>Uploaded Image:</h3>
+        <img src="{{ image_url }}" width="320" class="img-preview">
+    {% endif %}
+
+    {% if result %}
+        <div class="result-box {% if result == 'Normal Skin' %}success{% else %}error{% endif %}">
+            <h3>Result: {{ result }}</h3>
+            <p><strong>Prediction Score:</strong> {{ score }}</p>
+        </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
