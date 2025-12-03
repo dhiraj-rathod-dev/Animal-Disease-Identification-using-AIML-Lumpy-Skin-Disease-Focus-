@@ -11,11 +11,22 @@ The solution combines **Convolutional Neural Networks (CNN)** for disease detect
 
 ---
 
+Here is your **updated README section** with the **Project Members added cleanly and professionally** under the **Team & Duration** part.
+
+---
+
 ## 👨‍💻 Team & Duration
 
 * **Team Size**: 4
+* **Team Members**:
+
+  * **Sudhanshu Pendor**
+  * **Dhiraj Rathod**
+  * **Shivanjali Jagtap**
+  * **Shravani Sakore**
 * **Mentor**: Dr. Manish Giri
-* **Duration**: January 2024 – May 2024
+* **Duration**: January 2024 
+
 
 ---
 
